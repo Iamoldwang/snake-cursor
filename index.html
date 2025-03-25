@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪食蛇小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 左侧控制面板 -->
+        <div class="control-panel">
+            <h1>贪食蛇小游戏</h1>
+            <button id="startBtn" class="glow-button">开始游戏</button>
+            <div class="speed-selector">
+                <label for="difficulty">速度选择:</label>
+                <select id="difficulty">
+                    <option value="easy">简单</option>
+                    <option value="normal" selected>普通</option>
+                    <option value="hard">困难</option>
+                </select>
+            </div>
+            <div class="score-info">
+                <p>游戏时长: <span id="gameTime">0</span> 秒</p>
+                <p>游戏得分: <span id="score">0</span></p>
+            </div>
+        </div>
+
+        <!-- 中间游戏区域 -->
+        <div class="game-board">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <!-- 右侧排行榜 -->
+        <div class="leaderboard">
+            <h2>得分排行榜 TOP 10</h2>
+            <div id="leaderboardList"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html> 
